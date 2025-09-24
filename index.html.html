@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenGrow | Alimentos orgánicos que no se desperdician</title>
+  <meta name="description" content="GreenGrow conecta a pequeños agricultores urbanos con consumidores mediante suscripciones de cajas orgánicas sobrantes, entregadas en bicicleta eléctrica. Menos desperdicio, menos CO₂, más equidad." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0e13;--panel:#0f141b;--ink:#e8eef6;--muted:#9fb0c3;--line:#1d2735;
+      --accent:#33d17a;--accent2:#7cc2ff;--ring:rgba(51,209,122,.28);
+      --good:#33d17a;--warn:#ffd166;--bad:#ef476f;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b0e13,#0d1218 60%,#0b0e13);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    a{color:var(--accent2);text-decoration:none}
+    a:hover{opacity:.92}
+    .container{max-width:1120px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(11,14,19,.7);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:20}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+    .brand .logo{width:28px;height:28px;border-radius:8px;background:conic-gradient(from 0deg at 50% 50%,var(--accent),#2adfb3,var(--accent2),#6ea8ff,var(--accent));box-shadow:0 0 0 3px rgba(124,194,255,.08)}
+    .navlinks a{margin-left:16px;font-weight:600}
+    .btn{display:inline-block;border:0;border-radius:12px;padding:12px 16px;font-weight:800}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#07121a}
+    .btn.ghost{border:1px solid var(--line);background:#0d1218;color:var(--ink)}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center;padding:54px 0}
+    .card{background:linear-gradient(180deg,#0f141b,#0c1016);border:1px solid var(--line);border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .hero .card{padding:32px}
+    h1{font-family:"Playfair Display",serif;font-size:44px;line-height:1.06;margin:0 0 12px}
+    p.lead{color:var(--muted);font-size:18px;margin:0 0 18px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:#0c1520;border:1px solid #1e2a3b;color:#a4c6ff;font-weight:700;font-size:12px}
+
+    /* sections */
+    .section{padding:28px;margin:28px 0}
+    h2{font-size:28px;margin:0 0 12px}
+    h3{font-size:18px;margin:0 0 6px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .metric{display:flex;flex-direction:column;gap:4px;padding:16px;border:1px solid var(--line);border-radius:14px}
+    .metric b{font-size:24px}
+    .list{display:grid;gap:10px}
+    .list .item{display:flex;justify-content:space-between;gap:12px;padding:12px;border:1px solid var(--line);border-radius:12px}
+
+    /* tables */
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:12px;border-bottom:1px dashed #213045}
+    th{text-align:left;color:#b6c6d8;font-weight:700}
+
+    /* pitch */
+    blockquote{margin:0;padding:18px;border-left:4px solid var(--accent);background:#0c1219;border-radius:8px}
+
+    footer{padding:40px 0;color:var(--muted);text-align:center}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid.cols-3,.grid.cols-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand"><span class="logo" aria-hidden="true"></span> GreenGrow</div>
+        <div class="navlinks">
+          <a href="#problema">Problema</a>
+          <a href="#oportunidad">Oportunidad</a>
+          <a href="#impacto">Sostenibilidad</a>
+          <a href="#mvp">Prototipo</a>
+          <a href="#pitch">Pitch</a>
+          <a href="#contacto" class="btn ghost">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="card">
+        <div class="badges">
+          <span class="pill">Antidesperdicio</span>
+          <span class="pill">Orgánico</span>
+          <span class="pill">Entrega en e‑bike</span>
+        </div>
+        <h1>Alimentos orgánicos que no se desperdician.</h1>
+        <p class="lead">GreenGrow conecta a pequeños agricultores urbanos con consumidores a través de suscripciones de cajas con excedentes orgánicos. Entregas en bicicleta eléctrica, precios justos y un 10% de donaciones a familias de bajos ingresos.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn primary" href="#suscripcion">Quiero mi caja</a>
+          <a class="btn ghost" href="#mvp">Ver MVP</a>
+        </div>
+      </div>
+      <div class="card" style="padding:0;overflow:hidden;aspect-ratio:4/3;display:grid;place-items:center">
+        <!-- Ilustración simple -->
+        <svg width="220" height="220" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+          <rect x="16" y="16" width="168" height="168" rx="18" stroke="url(#g1)" stroke-width="3"/>
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#33d17a"/>
+              <stop offset="100%" stop-color="#7cc2ff"/>
+            </linearGradient>
+          </defs>
+          <g stroke="#7cc2ff" stroke-width="2">
+            <path d="M60 130c30-10 40-35 40-60 20 10 30 25 30 45 0 20-15 35-35 35-12 0-24-8-35-20z" fill="#10202a"/>
+            <circle cx="120" cy="70" r="10" fill="#0e1b24"/>
+            <path d="M40 150h120"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section id="problema" class="section card">
+      <h2>1) Problema</h2>
+      <p>Desperdicio de alimentos frescos cultivados por pequeños agricultores urbanos y falta de acceso a comida orgánica asequible para comunidades de bajos ingresos, contribuyendo a contaminación y desigualdad.</p>
+      <div class="grid cols-3" style="margin-top:12px">
+        <div class="metric"><span class="muted">Dato global</span><b>≈30%</b><span class="muted">de alimentos se desperdician (FAO)</span></div>
+        <div class="metric"><span class="muted">Acceso</span><b>Bajo</b><span class="muted">precios altos excluyen a comunidades vulnerables</span></div>
+        <div class="metric"><span class="muted">Emisiones</span><b>Altas</b><span class="muted">transporte tradicional genera CO₂ innecesario</span></div>
+      </div>
+    </section>
+
+    <!-- OPORTUNIDAD / MODELO -->
+    <section id="oportunidad" class="section card">
+      <h2>2) Oportunidad de negocio</h2>
+      <p><strong>Producto:</strong> App/plataforma que conecta pequeños agricultores urbanos con consumidores mediante suscripciones de cajas de alimentos orgánicos sobrantes, con entregas en bicicleta eléctrica.</p>
+
+      <h3>Modelo de negocio</h3>
+      <table>
+        <thead><tr><th>Plan</th><th>Contenido</th><th>Precio sugerido</th></tr></thead>
+        <tbody>
+          <tr><td>Básico</td><td>5 kg de frutas y verduras orgánicas sobrantes</td><td>$5–10 / semana</td></tr>
+          <tr><td>Premium</td><td>Productos exclusivos + selección curada</td><td>$15 / semana</td></tr>
+          <tr><td>Social</td><td>10% de cajas donadas a familias de bajos ingresos</td><td>Incluido</td></tr>
+        </tbody>
+      </table>
+      <div class="grid cols-3" style="margin-top:14px">
+        <div class="metric"><span class="muted">Mercado orgánico</span><b>+10% anual</b><span class="muted">crecimiento estimado</span></div>
+        <div class="metric"><span class="muted">Retención</span><b>&gt;50%</b><span class="muted">en modelos por suscripción</span></div>
+        <div class="metric"><span class="muted">Equidad</span><b>10%</b><span class="muted">de cajas donadas</span></div>
+      </div>
+
+      <div id="suscripcion" style="margin-top:16px">
+        <a class="btn primary" href="#contacto">Quiero ser suscriptor</a>
+        <a class="btn ghost" href="#faq">Preguntas frecuentes</a>
+      </div>
+    </section>
+
+    <!-- SOSTENIBILIDAD -->
+    <section id="impacto" class="section card">
+      <h2>3) Sostenibilidad (Ambiental y Social)</h2>
+      <div class="grid cols-2">
+        <div>
+          <h3>Público objetivo</h3>
+          <ul>
+            <li>Pequeños agricultores urbanos</li>
+            <li>Consumidores eco-conscientes</li>
+            <li>Hogares de bajos ingresos</li>
+          </ul>
+          <h3>Impacto ambiental</h3>
+          <ul>
+            <li>Evita ~10 t/año/ciudad de desperdicio → ~15 t CO₂ evitadas</li>
+            <li>Entrega en e‑bike: ~90% menos emisiones que camión</li>
+            <li>Servidores de bajo consumo</li>
+          </ul>
+          <h3>Impacto social</h3>
+          <ul>
+            <li>+30% ingresos para agricultores</li>
+            <li>Acceso a comida saludable con precios asequibles</li>
+          </ul>
+          <h3>Impacto animal (opcional)</h3>
+          <ul>
+            <li>Cultivos orgánicos sin pesticidas protegen polinizadores</li>
+            <li>Excedentes donados a refugios animales</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Métricas de impacto</h3>
+          <table>
+            <thead><tr><th>Métrica</th><th>Objetivo</th></tr></thead>
+            <tbody>
+              <tr><td>Alimentos salvados</td><td>≥ 10 t/año/ciudad</td></tr>
+              <tr><td>CO₂ evitado</td><td>≥ 15 t/año/ciudad</td></tr>
+              <tr><td>Familias beneficiadas</td><td>≥ 10% de las cajas</td></tr>
+            </tbody>
+          </table>
+          <div class="metric" style="margin-top:12px">
+            <span class="muted">Ejemplo 6 meses</span>
+            <b>2 t salvadas · 3 t CO₂ evitadas · 200 cajas donadas</b>
+            <span class="muted">Ingresos estimados: $3k (premium) + $5k (alianzas)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MVP / PROTOTIPO -->
+    <section id="mvp" class="section card">
+      <h2>4) Prototipo (MVP) de GreenGrow</h2>
+      <p><strong>Visión general:</strong> App móvil/web para conectar agricultores urbanos con consumidores vía suscripciones. Entrega en bicicleta eléctrica. <strong>Costo inicial estimado:</strong> ~US$12k (Flutter para app, Mapbox para GPS, Google Cloud Vision para IA básica).</p>
+      <div class="grid cols-3">
+        <div class="metric"><span class="muted">Inicio</span><b>CTA doble</b><span class="muted">“Agricultor / Consumidor” + banner “¡Salva comida!”</span></div>
+        <div class="metric"><span class="muted">Perfil</span><b>Subida de fotos</b><span class="muted">Agricultor sube excedentes; consumidor gestiona plan</span></div>
+        <div class="metric"><span class="muted">Catálogo</span><b>Cajas</b><span class="muted">Ej.: “Mixta 5 kg” + mapa de entregas</span></div>
+      </div>
+      <div class="grid cols-2" style="margin-top:12px">
+        <div class="card" style="padding:16px">
+          <h3>Funcionalidades esenciales</h3>
+          <ul>
+            <li>Registro por email/redes</li>
+            <li>IA clasifica fotos y estima valor</li>
+            <li>Suscripción con Stripe (10% donación)</li>
+            <li>Ruteo GPS optimiza entregas (−20% emisiones)</li>
+            <li>Gamificación: puntos verdes y descuentos</li>
+          </ul>
+        </div>
+        <div class="card" style="padding:16px">
+          <h3>Arquitectura sugerida</h3>
+          <ul>
+            <li>Frontend: Flutter (app) + web responsive</li>
+            <li>Backend: Firebase / Supabase</li>
+            <li>Mapas/Logística: Mapbox, OpenRouteService</li>
+            <li>Pagos: Stripe</li>
+            <li>IA: Cloud Vision (calidad/variedad)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PITCH -->
+    <section id="pitch" class="section card">
+      <h2>5) Elevator pitch</h2>
+      <blockquote>
+        “Imagina una ciudad donde los alimentos frescos no terminan en vertederos y todos tienen acceso a comida orgánica asequible. Eso es <strong>GreenGrow</strong>. Conectamos a pequeños agricultores urbanos con consumidores mediante suscripciones de cajas de frutas y verduras sobrantes, entregadas en bicicleta eléctrica para minimizar emisiones. Cada año, evitamos ~10 toneladas de desperdicio por ciudad y reducimos CO₂ equivalente a plantar cientos de árboles. Además, donamos el 10% de las cajas a familias de bajos ingresos, promoviendo nutrición y equidad. Con US$15,000 lanzamos un piloto para 500 suscriptores, monetizando con suscripciones premium y alianzas con empresas verdes. GreenGrow no solo salva alimentos: transforma comunidades y protege el planeta. ¿Te sumas?”
+      </blockquote>
+    </section>
+
+    <!-- FAQ / ACLARACIONES -->
+    <section id="faq" class="section card">
+      <h2>Preguntas rápidas</h2>
+      <div class="grid cols-2">
+        <div>
+          <h3>¿Qué solucionamos?</h3>
+          <ul>
+            <li>Desperdicio de alimentos frescos de pequeños agricultores urbanos.</li>
+            <li>Falta de acceso a comida orgánica asequible.</li>
+            <li>Emisiones del transporte tradicional de alimentos.</li>
+          </ul>
+          <h3>¿Qué vendemos?</h3>
+          <ul>
+            <li>Cajas semanales (5 kg) con excedentes orgánicos.</li>
+            <li>Planes: Básico ($5–10) y Premium ($15).</li>
+            <li>Entrega sostenible en bicicletas eléctricas.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>¿Qué sostenibilidad tiene?</h3>
+          <ul>
+            <li><strong>Ambiental:</strong> menos desperdicio y CO₂; agricultura orgánica que protege fauna.</li>
+            <li><strong>Económica:</strong> +30% ingresos para agricultores; suscripciones recurrentes.</li>
+            <li><strong>Social:</strong> 10% de cajas donadas a familias de bajos ingresos.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section card">
+      <h2>Contacto</h2>
+      <div class="list">
+        <div class="item"><span class="muted">Email</span><a href="mailto:contacto@greengrow.org">contacto@greengrow.org</a></div>
+        <div class="item"><span class="muted">WhatsApp</span><a href="https://wa.me/51999999999" target="_blank" rel="noopener">+51 999 999 999</a></div>
+        <div class="item"><span class="muted">Redes</span><span><a href="#">Instagram</a> · <a href="#">LinkedIn</a> · <a href="#">TikTok</a></span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    GreenGrow · Hecho con ♥ · © <span id="y"></span>
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // Scroll suave
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{const id=a.getAttribute('href');const el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});}})
+    })
+  </script>
+</body>
+</html>
